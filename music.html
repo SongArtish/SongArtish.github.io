@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="gradient-card">
   <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -8,7 +8,7 @@
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <title>Song Music</title>
 </head>
-<body class="gradient-card">
+<body>
 <!-- Full Page Intro -->
 <div class="view">
   <!-- Mask & flexbox options-->
@@ -17,9 +17,7 @@
     <div class="container d-flex justify-content-center my-4 mb-5">
 
       <div id="mobile-box">
-        <br>
         <!-- <h4 class="my-5 h5 text-center" style="color:rgb(235, 232, 234)">   <i class="fas fa-play ml-2"></i></h4> -->
-
         <!-- Card -->
         <div class="card">
 
@@ -37,10 +35,16 @@
 
             <h5 class="h5 font-weight-bold">MKTO</h5>
             <p class="mb-0">Classic</p>
+            <!-- icon -->
+            <div class="row">
+              <div class="col"><i class="fas fa-arrow-alt-circle-left fa-2x" style="cursor: pointer;" onclick = "location.href = 'https://songartish.github.io/playground' "></i></div>
+              <div class="col"><i id="pButton" class="fas fa-play fa-2x"></i></div>
+              <div class="col"><i class="fas fa-home fa-2x" style="cursor: pointer;" onclick = "location.href = 'https://songartish.github.io' "></i></div>
+            </div>
             <ul>
-              <li><i class="fas fa-arrow-alt-circle-left" style="cursor: pointer;" onclick = "location.href = 'https://songartish.github.io/playground' "></i></li>
-              <li><i id="pButton" class="fas fa-play"></i></li>
-              <li><i class="fas fa-home" style="cursor: pointer;" onclick = "location.href = 'https://songartish.github.io' "></i></li>
+              <li><i class="fas fa-arrow-alt-circle-left fa-2x" style="cursor: pointer;" onclick = "location.href = 'https://songartish.github.io/playground' "></i></li>
+              <li><i id="pButton" class="fas fa-play fa-2x"></i></li>
+              <li><i class="fas fa-home fa-2x" style="cursor: pointer;" onclick = "location.href = 'https://songartish.github.io' "></i></li>
             </ul>
             <audio id="music" preload="true">
               <source src="assets/audio/Classic.mp3">
@@ -236,7 +240,8 @@
   }
 
   #pButton {
-    float: left; }
+    /* float: center; */
+  }
 
   #timeline {
     width: 90%;
@@ -263,11 +268,16 @@
 
 ul {
   list-style:none;
+  display: inline-block;
   height: 5.35em;
   line-height: 2em;
   position: relative;
   top: 0;
   width: 5.35em;
+}
+
+li {
+  width: 100%;
 }
 </style>
 </body>
